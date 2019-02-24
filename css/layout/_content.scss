@@ -1,0 +1,89 @@
+article {
+    margin-bottom: 50px;
+    background: $gray;
+    padding: 50px 100px 80px;
+    @include box-shadow(0 0 6px 6px rgba($dark, .05));
+    position: relative;
+
+    &.post--wrapp {
+        padding-top: 90px;
+    }
+
+    @media screen and (max-width: 1023px) {       
+        padding: 20px 50px 40px;
+        margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 480px) {       
+        padding: 20px 25px;
+        margin-bottom: 30px;
+    }
+
+    h1,
+    h2 {
+        padding-bottom: 40px;
+        border-bottom: 2px solid rgba($dark, .1);
+    }
+
+    h2 {
+        padding-top: 40px;
+
+        @media screen and (max-width: 980px) {       
+            padding-top: 20px;
+        }
+    }
+
+    p {
+        padding-top: 30px;
+    }
+
+    a.read--more {
+        margin-top: 50px;
+        font-weight: 700;
+        display: block;
+
+        i {
+            padding-left: 3px;
+            @include font-size(1.4, 3);
+            @extend .hov;
+        }
+
+        &:hover {
+            
+            i {
+                padding-left: 13px;
+                @extend .hov;
+            }
+        }
+    }
+
+    .comments--wrapper {
+        margin-top: 80px;
+        padding: 50px;
+        background: $dark;
+        border-top: 2px solid rgba($dark, .2);
+        @include font-size(1.5, 3);
+
+        h3 {
+            padding: 0 0 30px;
+            color: $green;
+            @include font-size(2.7, 3);
+        }
+
+        p {
+            padding-top: 10px;
+        }
+
+        div {
+            border-bottom: 2px solid rgba($dark, .05);
+            margin-bottom: 25px;
+            padding-bottom: 30px;
+
+            &:last-child {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+/* global */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $dark;
+    color: $base;
+    @include font-size(1.7, 3);
+
+    @media screen and (max-width: 1023px) {       
+        @include font-size(1.8, 3.4);
+    }
+
+    @media screen and (max-width: 480px) {       
+        @include font-size(1.6, 2.8);
+    }
+}
+
+body, 
+input, 
+textarea,
+select {
+    @extend .sans;
+}
+
+a, button { 
+    color: $green;
+    text-decoration: none;
+    
+    &:hover { 
+        @extend .hov;
+        color: rgba($green, .9);
+    }
+    
+    &:active {
+        @extend .act;
+        color: rgba($green, .8);
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+p {
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+h1,
+h2 {
+    color: $green;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-style: italic;
+    @extend .oswald;
+    @include font-size(4, 5);
+
+    @media screen and (max-width: 980px) {
+        @include font-size(3, 4);
+    }
+
+    @media screen and (max-width: 480px) {
+        @include font-size(2.4, 3.2);
+    }
+}
+
+/* layout global */
+section {
+    width: 70%;
+    margin: $center;
+
+    @media screen and (max-width: 1023px) {       
+        width: $full;
+        padding: 0 20px;
+    }
+}
+
+/* logo */
+.logo img {
+    width: 220px;
+    height: auto;
+    line-height: 0;
+    margin: 30px 0;
+}
